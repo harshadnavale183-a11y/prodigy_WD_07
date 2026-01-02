@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshad | Web Developer Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+/* ====== GLOBAL ====== */
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body {background:#0f172a;color:#e5e7eb;line-height:1.6;transition:0.4s;overflow-x:hidden;}
+body.light{background:#f5f5f5;color:#111;}
+
+/* ====== LOADER ====== */
+#loader{position:fixed;width:100%;height:100%;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;}
+.spinner{width:50px;height:50px;border:5px solid #555;border-top:5px solid #60a5fa;border-radius:50%;animation:spin 1s linear infinite;}
+@keyframes spin{100%{transform:rotate(360deg)}}
+
+/* ====== CUSTOM CURSOR ====== */
+.cursor{width:20px;height:20px;border:2px solid #60a5fa;border-radius:50%;position:fixed;pointer-events:none;transform:translate(-50%,-50%);z-index:999;}
+@media(max-width:768px){.cursor{display:none;}}
+
+/* ====== SCROLL BAR ====== */
+#progress{position:fixed;top:0;left:0;height:4px;background:#60a5fa;width:0%;z-index:1000;}
+
+/* ====== HEADER ====== */
+header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;transition:0.4s;}
+header h1{font-size:3rem;color:#60a5fa;}
+header p{max-width:600px;margin:20px auto;color:#cbd5f5;}
+header .btn{display:inline-block;margin:10px;padding:10px 20px;border-radius:6px;text-decoration:none;color:#0f172a;background:#60a5fa;font-weight:bold;transition:0.3s;}
+header .btn:hover{opacity:0.8;}
+body.light header h1{color:#3b82f6;}
+body.light header p{color:#111;}
+body.light header .btn{color:#fff;background:#3b82f6;}
+
+/* ====== SECTIONS ====== */
+section{padding:60px 20px;max-width:1000px;margin:auto;transition:0.4s;}
+h2{text-align:center;margin-bottom:30px;color:#93c5fd;}
+body.light h2{color:#2563eb;}
+.about p{text-align:center;max-width:800px;margin:auto;}
+.skills, .projects, .certificates{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;}
+.card{background:#1e293b;padding:20px;border-radius:8px;text-align:center;transition:0.3s;cursor:pointer;}
+.card:hover{transform:translateY(-8px);}
+body.light .card{background:#e0e7ff;color:#111;}
+footer{text-align:center;padding:20px;background:#020617;color:#94a3b8;}
+body.light footer{background:#dbeafe;color:#111;}
+
+/* ====== TYPING ====== */
+#typing::after{content:"|";animation:blink 1s infinite;}
+@keyframes blink{0%,50%,100%{opacity:1}25%,75%{opacity:0}}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader"><div class="spinner"></div></div>
+
+<!-- Scroll Progress -->
+<div id="progress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor"></div>
+
+<!-- Header -->
+<header>
+  <div>
+    <h1>Hi, I'm Harshad</h1>
+    <p>A passionate <span id="typing"></span> focused on building clean, responsive, and user‑friendly websites.</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+</header>
+
+<!-- About -->
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a motivated web developer with strong skills in HTML, CSS, JavaScript, Python, and Java.
+    I enjoy turning ideas into real-world web applications and continuously improving my skills.
+    <br><br>
+    <strong>Education:</strong> BSc Computer Science<br>
+    <strong>Experience:</strong> Personal Projects & Practice-Based Learning
+  </p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Python</div>
+    <div class="card">Java</div>
+    <div class="card">React (Basic)</div>
+    <div class="card">Git & GitHub</div>
+    <div class="card">DBMS & RDBMS</div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_05/','_blank')">
+      <h3>Weather App</h3>
+      <p>Simple weather application using API and JavaScript.</p>
+    </div>
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_02/','_blank')">
+      <h3>stopwatch </h3>
+      <p>Personal responsive portfolio built with HTML and CSS.</p>
+    </div>
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_03/','_blank')">
+      <h3>Tic-Tac-Toe</h3>
+      <p>Programs for string manipulation and data structures.</p>
+    </div>
+    <div class="card" onclick="window.open('https://harshadnavale183-a11y.github.io/prodigy_WD_01/','_blank')">
+      <h3>Simple Web Page</h3>
+      <p>A clean, responsive single-page website built with HTML and CSS.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificates">
+    <div class="card"><h3>HTML & CSS Certificate</h3></div>
+    <div class="card"><h3>Python Programming Certificate</h3></div>
+    <div class="card"><h3>DBMS Certificate</h3></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="text-align:center">Email: harshad@example.com</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Harshad | Web Developer</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+// AOS Init
+AOS.init({duration:1200, once:true});
+
+// Loader
+window.onload=()=>document.getElementById("loader").style.display="none";
+
+// Dark/Light Mode Toggle
+document.body.insertAdjacentHTML('beforeend','<div style="position:fixed;top:20px;right:20px;z-index:1000;"><button onclick="document.body.classList.toggle(\'light\')" style="padding:6px 15px;background:#60a5fa;color:#0f172a;border:none;border-radius:6px;cursor:pointer;">🌙 / ☀️</button></div>');
+
+// Scroll Progress Bar
+window.addEventListener("scroll",()=>{let st=document.documentElement.scrollTop;let h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById("progress").style.width=(st/h)*100+"%";});
+
+// Custom Cursor
+const cursor=document.querySelector(".cursor");
+document.addEventListener("mousemove",e=>{cursor.style.left=e.clientX+"px";cursor.style.top=e.clientY+"px";});
+
+// Typing Animation
+const texts=["Web Developer","Frontend Developer","Python Learner","Creative Designer"];
+let textIndex=0,charIndex=0,isDeleting=false;
+function typeEffect(){const typingElement=document.getElementById("typing");const currentText=texts[textIndex];if(!isDeleting){typingElement.textContent=currentText.substring(0,charIndex++);if(charIndex>currentText.length){isDeleting=true;setTimeout(typeEffect,1200);return;}}else{typingElement.textContent=currentText.substring(0,charIndex--);if(charIndex<0){isDeleting=false;textIndex=(textIndex+1)%texts.length;}}setTimeout(typeEffect,isDeleting?60:120);}
+typeEffect();
+</script>
+</body>
+</html>
